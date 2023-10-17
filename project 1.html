@@ -1,0 +1,788 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>social media agency </title>
+    <link rel="icon" type="image/x-icon" href="../img/logo_transparent.png">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            border: 1px solid black;
+
+        }
+
+        .navigation {
+            width: 99vw;
+            height: 67px;
+            background-color: white;
+            ;
+
+            color: black;
+            margin: auto;
+
+        }
+
+
+        .navigation::before {
+            content: '';
+            background: url(../img/brooke-cagle-tLG2hcpITZE-unsplash.jpg)no-repeat center center/cover;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            left: 0;
+
+            ;
+            z-index: -1;
+
+        }
+
+        .logo {
+            width: 12%;
+            position: relative;
+            left: 26px;
+            top: 14px;
+            font-size: 26px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .logo img {
+            width: 38px;
+            height: 42px;
+            position: absolute;
+            top: -5px;
+            left: -5px;
+        }
+
+        .logo label {
+            display: block;
+            width: 111%;
+            position: relative;
+            top: 2px;
+            left: 39PX;
+        }
+
+        #check {
+            float: right;
+            display: none;
+
+        }
+
+        #check:checked~ul {
+            left: 0%;
+        }
+
+        #checked {
+            float: right;
+            line-height: 5px;
+            display: none;
+            margin: -6px 14px;
+            font-size: 30px;
+        }
+
+        .navigation ul {
+            float: right;
+            transition: all 0.7s ease;
+
+        }
+
+        .navigation li {
+            list-style: none;
+            padding: 10px 25px;
+            display: inline;
+            translate: 12px 10px;
+
+        }
+
+        .navigation li a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+
+
+        }
+
+        .navigation li a:hover {
+            color: grey;
+        }
+
+        .navigation li a.active {
+            color: grey;
+        }
+
+        .home {
+            /* position: absolute; */
+            top: 50%;
+            left: 7rem;
+            border: 1px solid black;
+            width: 100vw;
+            height: 89vh;
+            background-color: #474444;
+            opacity: 0.7;
+            text-transform: capitalize;
+        }
+
+        .home h1 {
+            font-size: 55px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            width: 81vw;
+            margin: auto;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            position: relative;
+            top: 155px;
+            left: 112px;
+            font-weight: bold;
+        }
+
+        .home p {
+            color: white;
+            text-align: center;
+            font-size: 17px;
+            /* margin-top: 19px; */
+            position: relative;
+            top: 31%;
+        }
+
+        button {
+            width: 10%;
+            position: relative;
+            left: 42%;
+            border: 1px solid white;
+            top: 37%;
+            padding: 10px 10px;
+            border-radius: 24px;
+            background: white;
+            color: black;
+            text-transform: capitalize;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: transparent;
+            color: white;
+
+        }
+
+        .our-services {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+
+        }
+
+        .inner-container {
+            width: 100vw;
+            height: 99vh;
+
+            display: flex;
+        }
+
+        .inner-container h1 {
+            position: absolute;
+            top: 62px;
+            left: 44%;
+            font-size: 25px;
+            text-transform: capitalize;
+        }
+
+        .head {
+            position: relative;
+            top: 10px;
+            left: 10%;
+        }
+
+        .item {
+            width: 100vw;
+            height: 39vh;
+
+            margin: 7px;
+            position: relative;
+            top: 200px;
+        }
+
+        .item img {
+            width: 139px;
+            height: 139px;
+            border-radius: 50%;
+            position: relative;
+            top: 10px;
+            left: 125px;
+        }
+
+        .item h2 {
+            font-size: 23px;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .item p {
+            font-size: 10px;
+            text-align: center;
+            width: 86%;
+            text-transform: capitalize;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .about-us {
+            width: 100vw;
+            height: 100vh;
+
+        }
+
+        .inner-box {
+
+            height: 100vh;
+        }
+
+        .inner-box h1 {
+            position: relative;
+            left: 48%;
+            top: 26px;
+            font-size: 34px;
+            text-transform: capitalize;
+            width: 11%;
+        }
+
+        .inner-box p {
+            text-align: center;
+            position: relative;
+            top: 72px;
+            width: 98%;
+            left: 10px;
+            font-family: 'PT Serif', serif;
+        }
+
+        .inner-box img {
+            width: 57%;
+            height: 350px;
+            position: relative;
+            top: 88px;
+            left: 21%;
+            border-radius: 20px;
+        }
+
+        .contact-us {
+            width: 100vw;
+            height: 400px;
+
+        }
+
+        .contact-box {
+            width: 100vw;
+            height: 390px;
+
+        }
+
+        .contact-heading {
+            position: relative;
+            top: 17px;
+            left: 48%;
+            width: 10%;
+            text-transform: capitalize;
+            font-size: 21px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+
+
+        .contact-box form {
+            position: relative;
+            left: 507px;
+            width: 26%;
+            height: 280px;
+            border: 1px solid black;
+            top: 49px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 2.7px black;
+        }
+
+        .login-form {
+            position: relative;
+            top: 12px;
+            left: 116px;
+            font-size: 21px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            width: 44%;
+        }
+
+        .contact-box input {
+            width: 67%;
+            padding: 7px 10px;
+            /* margin: auto; */
+            margin: 8px 55px;
+            border-radius: 10px;
+            text-align: center;
+            text-transform: capitalize;
+            translate: 0px 35px;
+        }
+
+
+        .contact-box .btn {
+            width: 50%;
+            position: relative;
+            top: 50px;
+            left: 77px;
+        }
+
+        .btn:hover {
+            background-color: red;
+            color: white;
+        }
+
+        footer {
+            width: 100vw;
+            height: 50px;
+            background-color: blue;
+            color: black;
+        }
+
+        footer p {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: 47px;
+        }
+
+
+        @media (max-width:1049px) and (min-width:769px) {
+            .home h1 {
+                font-size: 41px;
+                position: relative;
+                left: 10px;
+            }
+
+
+            .home p {
+                width: 90%;
+                position: relative;
+                top: 164px;
+            }
+
+            .home button {
+                position: relative;
+                top: 189px;
+                width: 15%;
+            }
+
+            .home {
+                height: 92vh;
+            }
+
+            .our-services {
+                height: 90vh;
+                border: 2px solid black;
+            }
+
+            .inner-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+            .item {
+                position: relative;
+                top: 101px;
+                width: 32%;
+            }
+
+            .item h2 {
+                font-size: 17px;
+                position: relative;
+                left: 56px;
+                width: 77%;
+            }
+
+            .item p {
+                position: relative;
+                left: 32px;
+
+            }
+
+            .item img {
+                position: relative;
+                left: 78px;
+            }
+
+            .about-us {
+                position: relative;
+                top: -161px;
+
+            }
+
+            .about-us h1 {
+                width: 16%;
+                position: relative;
+                top: 28px;
+                font-size: 27px;
+            }
+
+            .contact-heading {
+                width: 15%;
+                position: relative;
+                left: 42%;
+            }
+
+            .contact-box form {
+                position: relative;
+                left: 35%;
+                width: 36%;
+            }
+        }
+
+        /*media query for fa - fa bars*/
+        @media (max-width:625px) {
+            #checked {
+                display: block;
+            }
+
+            .navigation ul {
+                width: 100%;
+                height: 39vh;
+                line-height: 53px;
+                position: absolute;
+                top: 72px;
+                left: -100%;
+                background-color: white;
+                color: black;
+                text-align: center;
+                z-index: 1;
+
+            }
+
+            .navigation li {
+                display: block;
+                color: white;
+            }
+        }
+
+        @media (max-width:766px) and (min-width:481px) {
+            .home h1 {
+                font-size: 37px;
+                position: relative;
+                left: 15px;
+                width: 93%;
+                top: 306px;
+            }
+
+            .home p {
+                width: 94%;
+                position: relative;
+                top: 329px;
+                left: 23px;
+            }
+
+            .home button {
+                position: relative;
+                top: 361px;
+                width: 23%;
+                left: 161px;
+            }
+
+            .home {
+                height: 92vh;
+            }
+
+            .our-services {
+                height: 103vh;
+                border: 2px solid black;
+            }
+
+            .inner-container {
+                display: flex;
+                flex-direction: column;
+                height: 155vh;
+            }
+
+            .inner-container h1 {
+                left: 37%;
+                top: 10px;
+            }
+
+            .item {
+                position: relative;
+                top: 58px;
+                width: 61%;
+                left: 74px;
+                height: 31vh;
+            }
+
+
+            .item h2 {
+                font-size: 23px;
+                position: relative;
+                left: 31px;
+                width: 86%;
+                top: 7px;
+            }
+
+            .item p {
+                position: relative;
+                left: 14px;
+                width: 95%;
+                top: 10px;
+                font-size: 15px;
+            }
+
+            .item img {
+                position: relative;
+                left: 74px;
+            }
+
+            .about-us {
+                position: relative;
+                top: 0px;
+                height: 69vh;
+            }
+
+
+            .about-us h1 {
+                width: 24%;
+                position: relative;
+                top: 28px;
+                font-size: 26px;
+                left: 38%;
+            }
+
+            .about-us img {
+                width: 69%;
+                height: 255px;
+            }
+
+            .contact-heading {
+                width: 25%;
+                position: relative;
+                left: 38%;
+            }
+
+            .contact-box form {
+                position: relative;
+                left: 18%;
+                width: 64%;
+            }
+        }
+
+        @media (max-width:481px) and (min-width:320px) {
+            .home h1 {
+                font-size: 30px;
+                position: relative;
+                left: 0px;
+                width: 88%;
+                top: 326px;
+            }
+
+           .home p {
+                width: 94%;
+                position: relative;
+                top: 350px;
+                left: 23px;
+
+                font-size:16px;
+            }
+
+            .home button {
+                position: relative;
+                top: 379px;
+                width: 30%;
+                left: 117px;
+            }
+
+            .home {
+                height: 92vh;
+            }
+
+            .our-services {
+                height: 107vh;
+
+            }
+
+            .inner-container {
+                display: flex;
+                flex-direction: column;
+                height: 96vh;
+            }
+
+            .inner-container h1 {
+                left: 32%;
+                top: 10px;
+            }
+
+            .item {
+                position: relative;
+                top: 58px;
+                width: 78%;
+                left: 38px;
+                height: 31vh;
+            }
+
+
+            .item h2 {
+                font-size: 21px;
+                position: relative;
+                left: 31px;
+                width: 91%;
+                top: 7px;
+                text-transform: capitalize;
+            }
+
+            .item p {
+                position: relative;
+                left: 14px;
+                width: 89%;
+                top: 10px;
+                font-size: 14px;
+            }
+
+            .item img {
+                position: relative;
+                left: 81px;
+            }
+
+            .about-us {
+                position: relative;
+                top: 33px;
+                height: 95vh;
+
+            }
+
+            .inner-box {
+                height: 95vh;
+            }
+
+
+            .about-us h1 {
+                width: 33%;
+                position: relative;
+                top: 28px;
+                font-size: 27px;
+                left: 34%;
+            }
+
+            .about-us img {
+                width: 92%;
+                height: 255px;
+                position: relative;
+                left: 14px;
+            }
+        
+                
+        
+            
+
+            .contact-heading {
+                width: 37%;
+                position: relative;
+                left: 32%;
+                top: 5px;
+            }
+
+            .contact-box form {
+                position: relative;
+                left: 6%;
+                width: 90%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <div class="logo">
+                <img src="../img/logo_transparent.png" width="20" height="20">
+                <label>DigitalStoryline</label>
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" id="checked"><i class="fa fa-bars"></i></label>
+            <ul>
+                <li><a href="#home-page" class="active">Home</a></li>
+                <li><a href="#about-page">About</a></li>
+                <li><a href="#service-page">Service</a></li>
+                <li><a href="#contact-page">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="home" id="home-page">
+            <h1>Digital marketing agency</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid modi veniam esse cumque et
+                sapiente nobis praesentium blanditiis illum!</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, fuga.</p>
+            <button>get in touch</button>
+        </section>
+        <section class="our-services" id="service-page">
+
+            <div class="inner-container">
+                <h1 id="heading">our services</h1>
+                <div class="item" id="box-1">
+                    <img src="../img/b1.jpg" alt="img" width="20" height="20">
+                    <h2>social media marketing</h2>
+                    <p>our social media agency is dedicated to helping bussiness and organization in the world</p>
+                </div>
+                <div class="item" id="box-2">
+                    <img src="../img/b3.jpg" alt="img" width="20" height="20">
+                    <h2>influencer marketing</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, similique.</p>
+                </div>
+                <div class="item" id="box-3">
+                    <img src="../img/b4.jpg" alt="img" width="20" height="20">
+                    <h2>brand awareness</h2>
+                    <p>our social media agency is dedicated to helping bussiness and organization in the world</p>
+                </div>
+            </div>
+        </section>
+        <section class="about-us" id="about-page">
+            <div class="inner-box">
+                <h1>about us</h1>
+                <p>We are DigitalStoryline, a dynamic and forward-thinking social media agency dedicated to unlocking
+                    your brand's true potential in the digital age. 🚀 With a finger on the pulse of ever-evolving
+                    social platforms, we're your partners in crafting compelling narratives that resonate with your
+                    audience.
+                    Our creative wizards, data aficionados, and strategic thinkers collaborate to drive your online
+                    presence to new heights. We're not just about likes and followers; we're all about meaningful
+                    connections, engagement, and conversions.
+                    Let's work together to tell your brand's unique story and create social media magic that leaves a
+                    lasting impact.
+                    Join us on this journey towards digital success! 🌟 #DigitalStoryline #SocialMediaExperts</p>
+
+                <img src="../img/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg" alt="img">
+
+            </div>
+        </section>
+        <section class="contact-us" id="contact-page">
+
+            <div class="contact-box">
+                <h1 class="contact-heading">contact us:</h1>
+                <form action="noaction.php">
+                    <h1 class="login-form">login form</h1>
+                    <input type="text" name="myname" placeholder="full name">
+                    <input type="email" name="myemail" placeholder="your Email">
+                    <input type="number" name="phoneNumber" placeholder="Phone Number">
+                    <button type="submit" class="btn">subscribe</button>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <p>all right reserve with DigitalStoryline&copy;</p>
+        </footer>
+    </div>
+</body>
+
+</html>
